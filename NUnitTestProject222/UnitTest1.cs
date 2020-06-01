@@ -19,6 +19,8 @@ namespace NUnitTestProjectAnya
         private const string CheckLoginPage = "Home page";
         private const string CheckAddProductPage = "CreateNew";
         private const string CheckLogout = "Login";
+        private const string searchProductName = "морс";
+
 
 
 
@@ -47,7 +49,9 @@ namespace NUnitTestProjectAnya
         {
             AddProductPage addProductPage = new AddProductPage(driver);
             addProductPage.AddNewProduct();
-            Assert.AreEqual(CheckAddProductPage, addProductPage.AssertAddNewProducts());
+
+            Assert.AreEqual(searchProductName, addProductPage.AssertAddNewProducts());
+
         }
 
         [Test, Order(3)]
